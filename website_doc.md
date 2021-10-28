@@ -1,14 +1,14 @@
 Website Main Functions:
 
-1: Main page
-  a: Animated display of NFT generations with total number
-  b: Catchphrase / Why purchase
+1) Main page
+  a> Animated display of NFT generations with total number
+  b> Catchphrase / Why purchase
     i: benefits
-  c: How to
+  c> How to
     i: purchase
     ii: specific currency
     iii: more info link
-  d: More info link
+  d> More info link
 
 2: More info
    a: TBD
