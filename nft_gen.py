@@ -2,6 +2,10 @@ from PIL import Image
 import os, random
 import pathlib
 
+#take one part of picture picked from random
+#take another random pic
+#combine
+
 class NFT:
   def __init__(self,base):
     self.pic = base
@@ -26,7 +30,6 @@ def get_random_picture(folder):
   rdmPic.code = rdmPic.code + fileNum
   return rdmPic
 
-
 #main
 def getDirlist():
   p = pathlib.Path().resolve()
@@ -39,12 +42,12 @@ def generateNFT(res):
   folder_list = getDirlist()
   for folder in folder_list: #layer random from each directory
     base.stack(get_random_picture(folder))
-  base.pic.show()
   return base
 
 def autoGen(num, resolution):
   serial_list = [None] * num
   i = 0
+  j = 0
   p = pathlib.Path().resolve()
   p = os.path.join(p, "generated")
   if not os.path.exists(p):
@@ -56,7 +59,11 @@ def autoGen(num, resolution):
       i = i + 1
       np = os.path.join(p, current.code + ".png")
       current.pic.save(np)
+      j = 0
     else:
+      j = j + 1
+      if(j > 500): #checks if all nfts have been generated
+	      break
       print("duplicate of" + current.code)
 
 num = input("Enter number of unique NFT's to generate:")
