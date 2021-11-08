@@ -47,6 +47,8 @@ def autoGen(num, resolution):
   i = 0
   p = pathlib.Path().resolve()
   p = os.path.join(p, "generated")
+  if not os.path.exists(p):
+      os.makedirs(p)
   while i < num:
     current = generateNFT(resolution)
     if(current.code not in serial_list):
