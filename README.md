@@ -1,6 +1,4 @@
 # ProjectFOMO
-FOMO's first business venture
-
 Simple Python Image Layering application
 Features:
   -> Size adjustable
